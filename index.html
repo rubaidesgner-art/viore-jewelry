@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIORÉ DIAMONDS</title>
+  <style>
+    :root {
+      --main-bg: #190326;   /* خلفية أساسية (بنفسجي غامق) */
+      --accent: #ffffff;    /* نص فاتح */
+      --accent-light: #ffffff; /* زر أبيض */
+      --footer-bg: #543868; /* لون الفوتر */
+      --gold: #d4af37;      /* ذهبي */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--main-bg);
+      color: white;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--footer-bg);
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 18px;
+    }
+
+    .nav-icons a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* ====== SLIDER ====== */
+    .slider {
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 16s infinite;
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+      height: 450px;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+    }
+
+    .slide .btn {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-light);
+      color: var(--main-bg);
+      padding: 12px 25px;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .slide .btn:hover {
+      background: white;
+      color: var(--main-bg);
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0; }
+      20% { margin-left: 0; }
+      25% { margin-left: -100%; }
+      45% { margin-left: -100%; }
+      50% { margin-left: -200%; }
+      70% { margin-left: -200%; }
+      75% { margin-left: -300%; }
+      95% { margin-left: -300%; }
+      100% { margin-left: 0; }
+    }
+
+    /* ====== ABOUT ====== */
+    .about {
+      padding: 50px;
+      text-align: center;
+      color: var(--accent);
+    }
+
+    .about h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* ====== NEW COLLECTION ====== */
+    .new-collection {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .new-collection img {
+      width: 100%;
+      height: 100vh; /* Full screen */
+      object-fit: cover;
+      opacity: 0.85;
+    }
+
+    .new-collection .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .new-collection h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .new-collection p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: var(--accent-light);
+      color: var(--main-bg);
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: white;
+      color: var(--main-bg);
+    }
+
+    /* ====== CATEGORIES ====== */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .category {
+      background-color: var(--footer-bg);
+      border-radius: 8px;
+      text-align: center;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .category:hover { transform: scale(1.05); }
+
+    .category img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .category h3 {
+      margin: 8px 0 4px; /* تم تقليل المسافة */
+      color: var(--accent);
+    }
+
+    .category p {
+      margin: 0 0 8px;  /* السعر قريب من الاسم */
+      font-weight: 500;
+    }
+
+    .category a {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 15px;
+      background: var(--accent-light);
+      color: var(--main-bg);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .category a:hover {
+      background: white;
+      color: var(--main-bg);
+    }
+
+    /* ====== THANK YOU BAR ====== */
+    .thank-you {
+      background-color: var(--accent);
+      text-align: center;
+      padding: 10px;
+      color: var(--main-bg);
+      font-weight: bold;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: var(--footer-bg);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    footer span { margin: 0 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-icons">
+      <a href="#">Home</a>
+      <a href="#">☰</a>
+      <a href="#">🛒</a>
+    </div>
+    <div class="logo">VIORÉ DIAMONDS</div>
+  </header>
+
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="image/neclace6.jpeg" alt="Ring">
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="slide">
+        <img src="image/bracelet2.png" alt="Necklace">
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="slide">
+        <img src="image/ring6.png" alt="Bracelet">
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="slide">
+        <img src="image/earrings3.jpeg" alt="Earrings">
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>At VIORÉ DIAMONDS, we celebrate the harmony of turquoise, violet, and silver in timeless jewelry pieces. 
+    Our collections draw inspiration from rare gemstones such as tanzanite — a breathtaking stone with deep blue-violet hues, 
+    recently honored as December’s birthstone. Each creation embodies elegance, rarity, and a story that lasts forever.</p>
+  </section>
+
+  <!-- NEW COLLECTION -->
+  <section class="new-collection">
+    <img src="image/neclace13.jpeg" alt="New Collection">
+    <div class="text">
+      <h2>New Collection</h2>
+      <p>SAR 6000&nbsp;</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="category">
+      <img src="image/ring5.jpeg" alt="Rings">
+      <h3>Rings</h3>
+      <p>SAR 700&nbsp;</p>
+      <a href="rings.html">Explore</a>
+    </div>
+
+    <div class="category">
+      <img src="image/earrings3.jpeg" alt="Earrings">
+      <h3>Earrings</h3>
+      <p>SAR 1500&nbsp;</p>
+      <a href="earrings.html">Explore</a>
+    </div>
+
+    <div class="category">
+      <img src="image/neclace10.jpeg" alt="Necklaces">
+      <h3>Necklaces</h3>
+      <p>SAR 8000&nbsp;</p>
+      <a href="necklaces.html">Explore</a>
+    </div>
+
+    <div class="category">
+      <img src="image/bracelet2.png" alt="Bracelets">
+      <h3>Bracelets</h3>
+      <p>$ 3000</p>
+      <a href="bracelets.html">Explore</a>
+    </div>
+
+    <div class="category">
+      <img src="image/neclace11.png" alt="Watches">
+      <h3>&nbsp;Necklaces&nbsp;</h3>
+      <p>SAR 6000&nbsp;&nbsp;</p>
+      <a href="watches.html">Explore</a>
+    </div>
+
+    <div class="category">
+      <img src="image/ring6.png" alt="Special">
+      <h3>Special Collection</h3>
+      <p>SAR 1500</p>
+      <a href="special.html">Explore</a>
+    </div>
+  </section>
+
+  <!-- THANK YOU -->
+  <div class="thank-you">
+    Thank you ❤
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 VIORÉ DIAMONDS</span> | 
+    <span>Email: info@viore.com</span> | 
+    <span>Phone: +966 500000000</span> | 
+    <span>Location: Riyadh, Saudi Arabia</span>
+  </footer>
+
+</body>
+</html>
